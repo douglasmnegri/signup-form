@@ -7,6 +7,7 @@
 h1, h1 + div {
     max-width: 600px;
     padding-bottom: 15px;
+    text-align: center;
 }
 
 body {
@@ -19,11 +20,17 @@ ul {
     list-style: none;
 }
 
-.first-block {
-    display: block;
-    text-align: center;
+form {
+    display: flex;
+    justify-content: space-between;
 }
 
-form > section {
-    display: flex;
+.name-block,
+.mail-block,
+.align-block {
+    margin: 25px;
+}
+
+input {
+    width: 250px;
 }

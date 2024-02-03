@@ -19,14 +19,56 @@
         </p>
       </div>
     </section>
+
     <form>
-      <section>
-        <p>
-          <label for="name">FIRST NAME</label>
-          <input type="text" name="name" id="name" required/>
-          <label for="last-name">LAST NAME</label>
-          <input type="text" name="last-name" id="last-name" required />
-        </p>
+      <section class="name-block">
+        <ul>
+          <div class="align-block">
+            <li>
+              <label for="name">FIRST NAME</label>
+            </li>
+            <input type="text" name="name" id="name" required />
+          </div>
+
+          <div class="align-block">
+            <li>
+              <label for="last-name">LAST NAME</label>
+            </li>
+            <input type="text" name="last-name" id="last-name" required />
+          </div>
+
+          <div class="align-block">
+            <li>
+              <label for="password">PASSWORD</label>
+            </li>
+            <input type="password" name="password" id="password" />
+          </div>
+        </ul>
+      </section>
+
+      <section class="mail-block">
+        <ul>
+          <div class="align-block">
+            <li>
+              <label for="mail">EMAIL</label>
+            </li>
+            <input type="email" name="email" id="email" />
+          </div>
+
+          <div class="align-block">
+            <li>
+              <label for="phone-number">PHONE NUMBER</label>
+            </li>
+            <input type="number" name="phone-number" id="phone-number" />
+          </div>
+
+          <div class="align-block">
+            <li>
+              <label for="pwd">CONFIRM PASSWORD</label>
+            </li>
+            <input type="password" name="pwd" id="pwd" />
+          </div>
+        </ul>
       </section>
     </form>
   </body>
