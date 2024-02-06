@@ -20,7 +20,7 @@
       </div>
     </section>
 
-    <form>
+    <form id="myForm" >
       <section class="name-block">
         <ul>
           <div class="align-block">
@@ -41,9 +41,12 @@
             <li>
               <label for="password">PASSWORD</label>
             </li>
-            <input type="password" name="password" id="password" />
+            <input type="password" name="password" id="password" minlength="8"/>
           </div>
         </ul>
+        <div class="align-block">
+          <button type="submit">Create account</button>
+        </div>
       </section>
 
       <section class="mail-block">
