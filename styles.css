@@ -1,45 +1,68 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:'Times New Roman', Times, serif
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font-family);
 }
 
-h1, h1 + div {
-    max-width: 600px;
-    padding-bottom: 15px;
-    text-align: center;
+:root {
+  --main-font-family: "Sinkin Sans";
+}
+
+textarea,
+input {
+  outline: none;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./images/background.svg);
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
-form {
-    display: flex;
-    justify-content: space-between;
+section.first-block + div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-block {
+  font-family: var(--main-font-family);
+  font-weight: bold;
+  text-align: center;
 }
 
 .name-block,
 .mail-block,
 .align-block {
-    margin: 25px;
+  margin: 25px;
 }
 
 input {
-    width: 250px;
+  width: 250px;
 }
 
 .error {
-    font-style:italic;
-    font-weight: bold;
-    font-size: 12px;
-    color: tomato;
+  font-family: var(--main-font-family);
+  font-size: 12px;
+  color: tomato;
+}
 
+form {
+  height: 750px;
+  width: 750px;
+  /* background-color: rgba(255,255,255,0.13); */
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 50px 35px;
 }
