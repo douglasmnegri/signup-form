@@ -4,76 +4,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.cdnfonts.com/css/sinkin-sans-400-regular"
+      rel="stylesheet"
+    />
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/sinkin-sans-400-regular");
+    </style>
     <script src="file.js"></script>
     <title>Sign-up form</title>
   </head>
   <body>
-    <section class="first-block">
-      <h1>Sign up</h1>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
-          voluptatum porro reprehenderit architecto sequi, maxime deserunt fuga
-          inventore soluta, maiores recusandae mollitia incidunt dolor. Impedit
-          doloribus eveniet quidem recusandae ea.
-        </p>
-      </div>
-    </section>
-
     <form id="myForm" action="https://www.google.com">
-      <section class="name-block">
-        <ul>
-          <div class="align-block">
-            <li>
-              <label for="name">FIRST NAME</label>
-            </li>
-            <input type="text" name="name" id="name" required />
-          </div>
-
-          <div class="align-block">
-            <li>
-              <label for="last-name">LAST NAME</label>
-            </li>
-            <input type="text" name="last-name" id="last-name" required />
-          </div>
-
-          <div class="align-block">
-            <li>
-              <label for="password">PASSWORD</label>
-            </li>
-            <input type="password" name="password" id="password" minlength="8"/>
-          </div>
-        </ul>
-        <div class="align-block">
-          <button type="submit">Create account</button>
-        </div> 
+      <section class="first-block">
+        <h1>REGISTRATION FORM</h1>
       </section>
 
-      <section class="mail-block">
-        <ul>
+      <div>
+        <section class="name-block">
+          <ul>
+            <div class="align-block">
+              <li>
+                <label for="name">FIRST NAME</label>
+              </li>
+              <input type="text" name="name" id="name" required />
+            </div>
+            <div class="align-block">
+              <li>
+                <label for="last-name">LAST NAME</label>
+              </li>
+              <input type="text" name="last-name" id="last-name" required />
+            </div>
+            <div class="align-block">
+              <li>
+                <label for="password">PASSWORD</label>
+              </li>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                minlength="8"
+              />
+            </div>
+          </ul>
           <div class="align-block">
-            <li>
-              <label for="mail">EMAIL</label>
-            </li>
-            <input type="email" name="email" id="email" />
+            <button type="submit">Create account</button>
           </div>
-
-          <div class="align-block">
-            <li>
-              <label for="phone-number">PHONE NUMBER</label>
-            </li>
-            <input type="number" name="phone-number" id="phone-number" />
-          </div>
-
-          <div class="align-block">
-            <li>
-              <label for="pwd">CONFIRM PASSWORD</label>
-            </li>
-            <input type="password" name="pwd" id="pwd" />
-            <div class="error"></div>
-          </div>
-        </ul>
-      </section>
+        </section>
+        <section class="mail-block">
+          <ul>
+            <div class="align-block">
+              <li>
+                <label for="mail">EMAIL</label>
+              </li>
+              <input type="email" name="email" id="email" />
+            </div>
+            <div class="align-block">
+              <li>
+                <label for="phone-number">PHONE NUMBER</label>
+              </li>
+              <input type="number" name="phone-number" id="phone-number" />
+            </div>
+            <div class="align-block">
+              <li>
+                <label for="pwd">CONFIRM PASSWORD</label>
+              </li>
+              <input type="password" name="pwd" id="pwd" />
+              <div class="error"></div>
+            </div>
+          </ul>
+        </section>
+      </div>
     </form>
   </body>
 </html>
