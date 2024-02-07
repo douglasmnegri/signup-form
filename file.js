@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const button = document.querySelector("button");
   const firstName = document.querySelector("#name");
   const lastName = document.querySelector("#last-name");
-  const password = document.getElementById("password");
+  const password = document.querySelector("#password");
 
   button.disabled = true;
 

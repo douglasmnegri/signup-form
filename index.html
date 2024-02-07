@@ -21,14 +21,15 @@
               <li>
                 <label for="name">FIRST NAME</label>
               </li>
-              <input type="text" name="name" id="name" required />
+              <input type="text" name="name" id="name" tabindex="1"  required />
               <span></span>
             </div>
             <div class="align-block">
               <li>
                 <label for="last-name">LAST NAME</label>
               </li>
-              <input type="text" name="last-name" id="last-name" required />
+              <input type="text" name="last-name" id="last-name" tabindex="3"  required />
+              <span class="hide"></span>
             </div>
             <div class="align-block">
               <li>
@@ -39,7 +40,10 @@
                 name="password"
                 id="password"
                 minlength="8"
+                tabindex="5"
+                required
               />
+              <span></span>
             </div>
           </ul>
           <div class="align-block">
@@ -52,19 +56,20 @@
               <li>
                 <label for="mail">EMAIL</label>
               </li>
-              <input type="email" name="email" id="email" />
+              <input type="email" name="email" id="email" tabindex="2"  />
             </div>
             <div class="align-block">
               <li>
                 <label for="phone-number">PHONE NUMBER</label>
               </li>
-              <input type="number" name="phone-number" id="phone-number" />
+              <input type="tel" name="phone-number" id="phone-number" tabindex="4"  />
             </div>
             <div class="align-block">
               <li>
                 <label for="pwd">CONFIRM PASSWORD</label>
               </li>
-              <input type="password" name="pwd" id="pwd" />
+              <input type="password" name="pwd" id="pwd" tabindex="6" required/>
+              <span></span>
               <div class="error"></div>
             </div>
           </ul>
