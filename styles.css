@@ -1,12 +1,15 @@
+@import url('https://fonts.cdnfonts.com/css/chivo-mono');
+
+:root {
+  --main-font-family: "Chivo Mono";
+  --main-font-color: "#DA576B";
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: var(--main-font-family);
-}
-
-:root {
-  --main-font-family: "Sinkin Sans";
 }
 
 textarea,
@@ -25,44 +28,107 @@ ul {
   list-style: none;
 }
 
-section.first-block + div {
+div.first-block + div {
   display: flex;
-  justify-content: space-between;
 }
 
 .first-block {
   font-family: var(--main-font-family);
-  font-weight: bold;
+  margin-top: 35px;
   text-align: center;
+}
+
+h1 {
+  margin-bottom: 15px;
 }
 
 .name-block,
 .mail-block,
 .align-block {
-  margin: 25px;
+  margin: 25px 25px 35px;
 }
 
 input {
-  width: 250px;
+  width: 350px;
+  height: 35px;
+  border-radius: 8px;
 }
 
 .error {
   font-family: var(--main-font-family);
   font-size: 12px;
-  color: tomato;
+  color: var(--main-font-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+  font-family: "Sinkin Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  width: 350px;
+  height: 30px;
+  margin-top: 3px;
+
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.2);
+  color: black;
+  transition: color 0.3s ease-out;
 }
 
 form {
-  height: 750px;
-  width: 750px;
-  /* background-color: rgba(255,255,255,0.13); */
+  display: flex;
+  font-family: var(--main-font-family);
+  flex-direction: column;
+  justify-content: center;
+  height: 90%;
+  width: 55%;
+  margin-right: 50px;
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
+  right: 0;
   top: 50%;
-  left: 50%;
   border-radius: 10px;
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-  padding: 50px 35px;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 50px rgba(8, 7, 16, 0.6);
+}
+
+button {
+  margin-top: 50px;
+  width: 100%;
+  color: #080710;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 7px;
+  transition: ease 0.8s;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  width: 70%;
+  height: 70%;
+  font-size: 14px;
+  pointer-events: all !important;
+  border: solid rgb(95, 91, 91);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 40px black (8, 7, 16, 0.6);
+}
+
+button:enabled {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+button:enabled:hover {
+  box-shadow: 4px 4px 0px 0px rgb(0, 0, 0);
+  transform: translateX(0.4em);
+  transform: translateY(0.4em);
 }

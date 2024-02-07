@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const passwordValue = password.value;
     const pwdValue = pwd.value;
     if (passwordValue === pwdValue) {
-      password.style.backgroundColor = "lightgreen";
-      pwd.style.backgroundColor = "lightgreen";
+      password.style.backgroundColor = "#50AFAC";
+      pwd.style.backgroundColor = "#50AFAC";
       errorMessage.textContent = "";
     } else {
-      password.style.backgroundColor = "tomato";
-      pwd.style.backgroundColor = "tomato";
+      password.style.backgroundColor = "#DA576B";
+      pwd.style.backgroundColor = "#DA576B";
       errorMessage.textContent = "*Passwords do not match";
       event.preventDefault();
     }
