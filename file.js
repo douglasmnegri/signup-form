@@ -19,6 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
       password.style.backgroundColor = "#50AFAC";
       pwd.style.backgroundColor = "#50AFAC";
       errorMessage.textContent = "";
+
+      setTimeout(() => {
+        password.style.backgroundColor = "";
+        pwd.style.backgroundColor = "";
+      }, 1500);
+
       event.preventDefault();
     } else {
       password.style.backgroundColor = "#DA576B";
