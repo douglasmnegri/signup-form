@@ -57,7 +57,7 @@ h1 {
 .name-block,
 .mail-block,
 .align-block {
-  margin: 0px 25px 50px;
+  margin: 0px 25px 35px;
 }
 
 input {
@@ -225,4 +225,10 @@ button:enabled:hover {
 
 .animate {
   animation-play-state: running !important;
+}
+
+@media (max-height: 950px) {
+  .checkmark {
+    margin: auto;
+  }
 }
