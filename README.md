@@ -4,6 +4,10 @@
 
 This is a simple form application that allows users to input their email, name, phone number, and password. The data entered by users could be stored for further processing.
 
+# Live Demo
+
+[Live Demo](https://douglasmnegri.github.io/signup-form/)
+
 # Features
 
 - User-friendly form interface.
@@ -24,4 +28,4 @@ Click the submit button
 
 # Screenshot
 
-[Screenshot](/images/screenshot.png)
+![Screenshot](/images/screenshot.png)
