@@ -17,11 +17,18 @@ input {
   outline: none;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-image: url(./images/background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100%;
 }
 
 ul {
@@ -34,19 +41,23 @@ div.first-block + div {
 
 .first-block {
   font-family: var(--main-font-family);
-  margin-bottom: 40px;
+  position: relative;
+  top: -60px;
   text-align: center;
 }
 
 h1 {
   margin-bottom: 15px;
-  font-size: 50px;
+  font-size: 65px;
+  text-shadow: 0 1px 0 #000000, 0 2px 0 #090909, 0 3px 0 #ffffff,
+    0 4px 0 #fffefe, 0 5px 0 #ffffff, 0 6px 0 #ffffff, 0 7px 0 #ffffff,
+    0 8px 0 #ffffff, 0 20px 30px rgba(0, 0, 0, 0.5);
+  padding-bottom: 35px;
 }
-
 .name-block,
 .mail-block,
 .align-block {
-  margin: 25px 25px 35px;
+  margin: 0px 25px 35px;
 }
 
 input {
@@ -104,8 +115,8 @@ input:required + span::after {
 form {
   display: flex;
   font-family: var(--main-font-family);
-  height: 90%;
-  width: 100%;
+  /* height: 90%;
+  width: 100%; */
   flex-direction: column;
   justify-content: center;
   margin-right: 50px;
@@ -121,13 +132,13 @@ form {
 }
 
 input[type="submit"] {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
 }
 
 button {
@@ -138,6 +149,8 @@ button {
   font-weight: 600;
   border-radius: 7px;
   transition: ease 0.8s;
+  margin-left: 25px;
+  margin-bottom: 25px;
 }
 
 button:disabled {
@@ -154,6 +167,7 @@ button:disabled {
 button:enabled {
   background-color: #ffffff;
   cursor: pointer;
+  margin: auto;
 }
 
 button:enabled:hover {
@@ -162,7 +176,7 @@ button:enabled:hover {
   transform: translateY(0.4em);
 }
 
-@media(min-width:2000px) {
+@media (min-width: 2000px) {
   form {
     display: flex;
     font-family: var(--main-font-family);
@@ -183,7 +197,7 @@ button:enabled:hover {
     display: flex;
     flex-wrap: wrap;
   }
-  
+
   button {
     color: #080710;
     padding: 15px;
@@ -193,7 +207,7 @@ button:enabled:hover {
     transition: ease 0.8s;
     flex: 5;
   }
-  
+
   button:disabled {
     cursor: not-allowed;
     width: fit-content;
@@ -204,16 +218,67 @@ button:enabled:hover {
     backdrop-filter: blur(20px);
     box-shadow: 0 0 40px black (8, 7, 16, 0.6);
   }
-  
+
   button:enabled {
     background-color: #ffffff;
     cursor: pointer;
   }
-  
+
   button:enabled:hover {
     box-shadow: 4px 4px 0px 0px rgb(0, 0, 0);
     transform: translateX(0.4em);
     transform: translateY(0.4em);
   }
 }
-  
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #DA576B;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.4, 0, 0.45, 1) forwards;
+}
+.checkmark {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 5;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  box-shadow: inset 0px 0px 0px #F7ABB1;
+  animation: fill 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+}
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes fill {
+  100% {
+    box-shadow: inset 50px 20px 30px 30px #DA576B;
+  }
+}
+
+.animate {
+  animation-play-state: running !important;
+}

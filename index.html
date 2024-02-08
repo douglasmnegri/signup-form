@@ -4,15 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.cdnfonts.com/css/chivo-mono" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/chivo-mono" rel="stylesheet" />
     <script src="file.js"></script>
     <title>Sign-up form</title>
   </head>
   <body>
-    <form id="myForm" action="https://www.google.com">
+    <form id="myForm">
       <div class="first-block">
         <h1>REGISTRATION FORM</h1>
-        <h4>Fill the text fields below. It's fast and easy!</h4>
+        <h4>
+          Your information is completly safe with us. <br />Mainly because this
+          page can't store or save data.
+        </h4>
       </div>
       <div>
         <section class="name-block">
@@ -21,14 +24,20 @@
               <li>
                 <label for="name">FIRST NAME</label>
               </li>
-              <input type="text" name="name" id="name" tabindex="1"  required />
+              <input type="text" name="name" id="name" tabindex="1" required />
               <span></span>
             </div>
             <div class="align-block">
               <li>
                 <label for="last-name">LAST NAME</label>
               </li>
-              <input type="text" name="last-name" id="last-name" tabindex="3"  required />
+              <input
+                type="text"
+                name="last-name"
+                id="last-name"
+                tabindex="2"
+                required
+              />
               <span class="hide"></span>
             </div>
             <div class="align-block">
@@ -53,19 +62,30 @@
               <li>
                 <label for="mail">EMAIL</label>
               </li>
-              <input type="email" name="email" id="email" tabindex="2"  />
+              <input type="email" name="email" id="email" tabindex="3" />
             </div>
             <div class="align-block">
               <li>
                 <label for="phone-number">PHONE NUMBER</label>
               </li>
-              <input type="tel" name="phone-number" id="phone-number" tabindex="4"  />
+              <input
+                type="tel"
+                name="phone-number"
+                id="phone-number"
+                tabindex="4"
+              />
             </div>
             <div class="align-block">
               <li>
                 <label for="pwd">CONFIRM PASSWORD</label>
               </li>
-              <input type="password" name="pwd" id="pwd" tabindex="6" required/>
+              <input
+                type="password"
+                name="pwd"
+                id="pwd"
+                tabindex="6"
+                required
+              />
               <span></span>
               <div class="error"></div>
             </div>
@@ -73,7 +93,27 @@
         </section>
       </div>
       <div class="align-block">
-        <button type="submit">Create account</button>
+        <button id="submitBtn" type="submit">Create account</button>
+        <!-- Your SVG -->
+        <svg
+          class="checkmark"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 52 52"
+          style="display: none"
+        >
+          <circle
+            class="checkmark__circle"
+            cx="26"
+            cy="26"
+            r="25"
+            fill="none"
+          />
+          <path
+            class="checkmark__check"
+            fill="none"
+            d="M14.1 27.2l7.1 7.2 16.7-16.8"
+          />
+        </svg>
       </div>
     </form>
   </body>
