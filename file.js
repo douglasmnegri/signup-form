@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
         pwd.style.backgroundColor = "";
       }, 1500);
 
-      event.preventDefault();
     } else {
       password.style.backgroundColor = "#DA576B";
       pwd.style.backgroundColor = "#DA576B";
@@ -100,6 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const firstName = document.querySelector("#name");
   const lastName = document.querySelector("#last-name");
   const password = document.querySelector("#password");
+  const pwd = document.querySelector("#pwd");
   const requiredStatement = document.querySelectorAll("span");
   const inputs = document.querySelectorAll("input");
   button.disabled = true;
@@ -120,7 +120,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (
       firstName.value !== "" &&
       lastName.value !== "" &&
-      password.value !== ""
+      password.value !== "" &&
+      password.value == pwd.value
     ) {
       button.disabled = false;
     } else {
@@ -132,7 +133,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (
       firstName.value !== "" &&
       lastName.value !== "" &&
-      password.value !== ""
+      password.value !== "" &&
+      password.value == pwd.value
     ) {
       button.disabled = false;
     } else {
@@ -143,12 +145,25 @@ document.addEventListener("DOMContentLoaded", () => {
       if (
         firstName.value !== "" &&
         lastName.value !== "" &&
-        password.value !== ""
+        password.value !== "" &&
+        password.value == pwd.value
       ) {
         button.disabled = false;
       } else {
         button.disabled = true;
       }
+      pwd.addEventListener("input", () => {
+        if (
+          firstName.value !== "" &&
+          lastName.value !== "" &&
+          password.value !== "" &&
+          password.value == pwd.value
+        ) {
+          button.disabled = false;
+        } else {
+          button.disabled = true;
+        }
+      })
     });
   });
 });
